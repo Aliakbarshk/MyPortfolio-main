@@ -38,7 +38,7 @@ const About: React.FC = () => {
           
           {/* Column 1: Personal Bio (The Person) */}
           <div className="lg:col-span-2 space-y-8">
-            <div className="p-8 bg-gray-900/50 border border-gray-800 rounded-lg relative overflow-hidden group hover:border-gray-600 transition-colors">
+            <div className="p-8 bg-gray-900/50 border-l-4 border-yellow-500 rounded-r-lg relative overflow-hidden group hover:bg-gray-900/80 transition-colors">
               <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
                 <User size={120} />
               </div>
@@ -72,7 +72,11 @@ const About: React.FC = () => {
             </div>
 
             {/* AI Capability Section */}
-            <div className="p-8 bg-gradient-to-r from-gray-900 to-black border border-gray-800 rounded-lg">
+            <div className="p-8 bg-gradient-to-r from-gray-900 to-black border border-gray-800 rounded-lg relative">
+               {/* Tech Corner Accents */}
+               <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-blue-500"></div>
+               <div className="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-blue-500"></div>
+
                <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
                 <span className="text-blue-500">02.</span> AI INTEGRATION
               </h3>

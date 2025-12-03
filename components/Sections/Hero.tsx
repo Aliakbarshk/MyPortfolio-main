@@ -20,6 +20,7 @@ const GlitchText: React.FC<{ text: string }> = ({ text }) => {
  * The landing section of the website.
  * Features a 3D interactive tilt card and staggered text animations.
  * Updated: Replaced image with User icon.
+ * Updated: Added Background Bat-Signal Watermark
  */
 const Hero: React.FC = () => {
   // Motion values for 3D Tilt Effect
@@ -57,7 +58,19 @@ const Hero: React.FC = () => {
 
   return (
     <section id="home" className="relative min-h-screen flex flex-col items-center justify-center px-4 overflow-hidden pt-20">
-      <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      
+      {/* Background Bat-Symbol Watermark */}
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-[0.03] z-0 overflow-hidden">
+        <svg
+          viewBox="0 0 100 60"
+          className="w-[150vw] h-[150vw] md:w-[80vw] md:h-[80vw] fill-white animate-pulse-slow"
+          style={{ animationDuration: '8s' }}
+        >
+          <path d="M50 10 C 60 10, 65 0, 75 0 C 85 0, 95 15, 100 25 C 90 35, 80 30, 75 35 C 70 40, 65 55, 50 60 C 35 55, 30 40, 25 35 C 20 30, 10 35, 0 25 C 5 15, 15 0, 25 0 C 35 0, 40 10, 50 10 Z" />
+        </svg>
+      </div>
+
+      <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
         
         {/* Text Content with Staggered Animation */}
         <motion.div 

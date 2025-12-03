@@ -7,6 +7,7 @@ import TechStack from './components/Sections/TechStack';
 import Interests from './components/Sections/Interests';
 import Footer from './components/Layout/Footer';
 import BatmanSignal from './components/UI/BatmanSignal';
+import CursorEffect from './components/UI/CursorEffect';
 
 /**
  * App Component
@@ -21,6 +22,9 @@ const App: React.FC = () => {
     <div className={`min-h-screen transition-colors duration-1000 ${signalActive ? 'bg-slate-950' : 'bg-[#050505]'}`}>
       {/* Background Effect */}
       <StarField />
+      
+      {/* Interactive Cursor Light & Follower */}
+      <CursorEffect />
       
       {/* Navigation */}
       <Navbar />
