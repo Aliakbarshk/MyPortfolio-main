@@ -19,7 +19,7 @@ const App: React.FC = () => {
   const [signalActive, setSignalActive] = useState(false);
 
   return (
-    <div className={`min-h-screen transition-colors duration-1000 ${signalActive ? 'bg-slate-950' : 'bg-[#050505]'}`}>
+    <div className="min-h-screen">
       {/* Background Effect */}
       <StarField />
       
@@ -29,7 +29,7 @@ const App: React.FC = () => {
       {/* Navigation */}
       <Navbar />
       
-      <main className="relative">
+      <main className="relative z-10">
         <Hero />
         <About />
         <TechStack />
